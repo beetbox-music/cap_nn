@@ -1,7 +1,7 @@
-## Created with Capacitor Create App
+## Neural Networks on Capacitor (VanillaJS)
 
 This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app),
-and comes with a very minimal shell for building an app.
+and showcases simple TensorFlow neural networks deployed on Capacitor JS apps.
 
 ### Running this example
 
