@@ -11,6 +11,8 @@ ctx.lineWidth = 40; // Set the stroke width
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const pred_span = document.querySelector('span.pred');
+  pred_span.innerText = '_';
 }
 
 async function predictCanvas() {
