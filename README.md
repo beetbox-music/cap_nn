@@ -11,3 +11,6 @@ To run the provided example, you can use `npm start` command.
 npm start
 ```
 ![img](./src/assets/imgs/cap_nn.png)
+
+## Known issues:
+- not working on Android: `E  Unable to open asset URL` of model JSON file.
