@@ -48,16 +48,14 @@ async function predictCanvas() {
   const model = await tf.loadLayersModel('./assets/model/model.json');
 
   // Convert the flattened array into a tensor using TensorFlow.js
-  const tensor = tf.tensor(flattenedArray, [784], 'float32');
+  const tensor = tf.tensor4d(flattenedArray, [1, 28, 28, 1], 'float32');
+
 
   // Log tensor data to check if it is all zeros
   tensor.data().then(data => {
 
-    // Expand dimensions to match model's expected input
-    const expandedTensor = tensor.expandDims(0);
-
     // Make prediction
-    const prediction = model.predict(expandedTensor);
+    const prediction = model.predict(tensor);
     const predIndex = prediction.argMax(1).dataSync()[0];
 
     // Map the index to a letter
